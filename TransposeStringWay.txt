@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.PortableExecutable;
+
+using Newtonsoft.Json.Linq;
+
+public static class Transpose
+{
+    private static string AllNthChars(int index, string[] lines)
+        => string.Join("", lines.Select(line => index < line.Length ? line.Substring(index, 1) : ""));
+
+    public static string String(string input)
+    {
+        if (string.IsNullOrEmpty(input))
+        {
+            return "";
+        }
+        
+        var lines = input
+            .Split('\n');
+            //.Select(line => line.ToCharArray(0, line.Length));
+        var maxLineSize = lines.Max(line => line.Length);
+
+        var transposedLines = Enumerable
+            .Range(0, maxLineSize)
+            .Select(index => AllNthChars(index, lines));
+
+        for (var i = 0; i < maxLineSize; i++)
+        {
+            var test = AllNthChars(i, lines);
+        }
+
+        return string.Join('\n', transposedLines);
+
+        // for (var i = 0; i < maxLineSize; i++)
+        // {
+        //     foreach (var line in lines)
+        //     {
+        //         var isEndOfLine = i >= line.Length
+        //         if (isEndOfLine)
+        //         {
+        //             results[i] += "";
+        //         }
+        //         else
+        //         {
+        //             results[i] += line[i];
+        //         }
+        //     }
+        // }
+        //
+        // return string.Join('\n', results);
+    }
+}
