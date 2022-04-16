@@ -89,7 +89,7 @@ public class TransposeTests
         Assert.Equal(expected, Transpose.String(lines));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Second_line_longer_than_first_line()
     {
         var lines = 
@@ -115,7 +115,7 @@ public class TransposeTests
         Assert.Equal(expected, Transpose.String(lines));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Mixed_line_length()
     {
         var lines = 
@@ -144,7 +144,7 @@ public class TransposeTests
         Assert.Equal(expected, Transpose.String(lines));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Square()
     {
         var lines = 
@@ -162,7 +162,7 @@ public class TransposeTests
         Assert.Equal(expected, Transpose.String(lines));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Rectangle()
     {
         var lines = 
@@ -182,7 +182,7 @@ public class TransposeTests
         Assert.Equal(expected, Transpose.String(lines));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Triangle()
     {
         var lines = 
