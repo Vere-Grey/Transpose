@@ -116,35 +116,6 @@ public class TransposeTests
     }
 
     [Fact]
-    public void Mixed_line_length()
-    {
-        var lines = 
-            "The longest line.\n" +
-            "A long line.\n" +
-            "A longer line.\n" +
-            "A line.";
-        var expected = 
-            "TAAA\n" +
-            "h   \n" +
-            "elll\n" +
-            " ooi\n" +
-            "lnnn\n" +
-            "ogge\n" +
-            "n e.\n" +
-            "glr \n" +
-            "ei  \n" +
-            "snl \n" +
-            "tei \n" +
-            " .n \n" +
-            "l e \n" +
-            "i . \n" +
-            "n   \n" +
-            "e   \n" +
-            ".";
-        Assert.Equal(expected, Transpose.String(lines));
-    }
-
-    [Fact]
     public void Square()
     {
         var lines = 
@@ -203,7 +174,7 @@ public class TransposeTests
     }
 
     [Fact]
-    public void FAILING_too_hard_Mixed_line_length()
+    public void Mixed_line_length()
     {
         var lines =
             "The longest line.\n" +
